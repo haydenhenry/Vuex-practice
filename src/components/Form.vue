@@ -1,6 +1,16 @@
 <template>
   <div>
     <label for="flavor">Favorite ice cream flavor?</label>
-    <input name="flavor">
+    <input @input="changed" name="flavor">
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    changed: function(event) {
+      alert(event.target.value);
+    }
+  }
+};
+</script>
